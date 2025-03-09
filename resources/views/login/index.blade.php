@@ -1,10 +1,10 @@
 @extends('layout.layout')
 
 @section('content')
-    <div class="w-screen h-screen flex flex-col justify-start items-center pt-20">
+    <div class="w-full h-screen flex flex-col justify-start items-center pt-20">
 
-        <form class="flex flex-col bg-gray-700 p-6 rounded-lg shadow-md w-full max-w-sm mx-auto space-y-4"
-            action="" method="POST">
+        <form class="flex flex-col bg-gray-700 p-6 rounded-lg shadow-2xl w-full max-w-sm mx-auto space-y-4"
+            action="{{ route('signin') }}" method="POST">
             @csrf
 
             <div class="flex gap-3 w-full justify-center items-center">
@@ -16,7 +16,7 @@
             <div>
                 <label for="email" class="block text-sm font-medium text-green-500">Email</label>
                 <input type="email" id="email" name="email" required
-                    class="mt-1 w-full pt-2 pb-1 caret-green-500  border-b-2 border-green-500 bg-transparent outline-none">
+                    class="mt-1 w-full pt-2 pb-1 caret-green-500  border-b-2 border-green-500 bg-transparent outline-none text-green-500">
             </div>
 
             <div>

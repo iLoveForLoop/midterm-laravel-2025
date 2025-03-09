@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Music;
 use App\Models\Project;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -17,6 +18,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         Project::factory(10)->create();
+        Music::factory(10)->create();
 
         User::factory()->create([
             'name' => 'Test User',

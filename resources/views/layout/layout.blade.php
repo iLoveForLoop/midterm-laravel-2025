@@ -9,10 +9,13 @@
     <title>Document</title>
 </head>
 
-<body class="flex h-screen">
+<body class="flex h-screen w-screen bg-gray-700">
 
     @include('components.sidebar')
-    @yield('content')
+    <div class="w-full">
+        @yield('content')
+    </div>
+
 </body>
 
 </html>

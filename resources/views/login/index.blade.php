@@ -9,7 +9,7 @@
 
             <div class="flex gap-3 w-full justify-center items-center">
                 <h2 class="text-2xl font-bold text-green-500 text-center uppercase ">Log in to</h2>
-
+                <img class="w-7 rotate-45" src="{{ asset('images/spotify.svg') }}" alt="">
             </div>
 
 

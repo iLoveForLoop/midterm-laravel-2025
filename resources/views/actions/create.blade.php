@@ -1,14 +1,16 @@
 @extends('layout.layout')
 
 @section('content')
-    <div class="flex flex-col w-full px-10 py-4 uppercase font-semibold text-green-500">
+    <div class="flex flex-col w-full px-10 py-4 font-semibold text-green-500 ">
 
 
         <form action="{{ route('music-store') }}" method="POST">
             @csrf
-            <div class="w-full flex justify-between items-center mb-10">
-                <h1 class="text-4xl ">Add Music</h1>
-                <button class="bg-green-500 text-gray-700 py-2 px-6 rounded-full cursor-pointer" type="submit">Save</button>
+            <div class="w-full flex justify-between items-center mb-10 border-b-1 border-green-500 pb-3">
+                <h1 class="text-3xl ">Add Music</h1>
+                <button
+                    class="bg-green-500 text-gray-700 py-2 px-6 rounded-full cursor-pointer hover:bg-gray-900 hover:text-green-500"
+                    type="submit">Save</button>
             </div>
 
             <div class="flex flex-col gap-1.5 mb-5">

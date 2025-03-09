@@ -18,8 +18,8 @@ Route::post('/signin', [AuthController::class, 'login'])->name('signin');
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 //Actions
-Route::get('/create', [MusicController::class, 'create'])->name('music-create')->middleware('auth');
-Route::post('store', [MusicController::class, 'store'])->name('music-store')->middleware('auth');
-Route::get('/edit/{music}', [MusicController::class, 'edit'])->name('music-edit');
-Route::put('/update/{music}', [MusicController::class, 'update'])->name('music-update');
-Route::delete('/delete/{music}', [MusicController::class, 'destroy'])->name('music-delete');
+Route::get('/create', [MusicController::class, 'create'])->name('music-create')->middleware('auth', 'can:create-record');
+Route::post('store', [MusicController::class, 'store'])->name('music-store')->middleware('auth', 'can:create-record');
+Route::get('/edit/{music}', [MusicController::class, 'edit'])->name('music-edit')->middleware('auth', 'can:edit-record');
+Route::put('/update/{music}', [MusicController::class, 'update'])->name('music-update')->middleware('auth', 'can:edit-record');
+Route::delete('/delete/{music}', [MusicController::class, 'destroy'])->name('music-delete')->middleware('auth', 'can:delete-record');
